@@ -1,0 +1,31 @@
+﻿<Page x:Class="UP01_Kuzmina_Shop.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Авторизация"
+      Background="{DynamicResource MainBackground}">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <TextBlock Text="Вход в систему" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- Поле для логина -->
+            <TextBlock Text="Логин:" Margin="5,5,0,0"/>
+            <TextBox x:Name="TextBoxLogin" ToolTip="Введите ваш логин" />
+
+            <!-- Поле для пароля -->
+            <TextBlock Text="Пароль:" Margin="5,10,0,0"/>
+            <PasswordBox x:Name="PasswordBoxPass" Height="30" Margin="5" VerticalContentAlignment="Center" ToolTip="Введите ваш пароль" />
+
+            <!-- Блок капчи (по умолчанию скрыт) -->
+            <StackPanel x:Name="CaptchaPanel" Visibility="Collapsed">
+                <TextBlock Text="Введите символы с картинки:" Margin="5,10,0,0"/>
+                <TextBlock x:Name="CaptchaText" FontSize="22" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center" Margin="0,5,0,5"/>
+                <TextBox x:Name="TextBoxCaptcha" ToolTip="Введите текст капчи" />
+            </StackPanel>
+
+            <!-- Кнопки -->
+            <Button x:Name="BtnLogin" Content="Войти" Margin="5,20,5,5" Click="BtnLogin_Click" ToolTip="Нажмите для входа"/>
+            <Button x:Name="BtnRegister" Content="Регистрация" Background="Gray" Margin="5,5,5,5" Click="BtnRegister_Click" ToolTip="Перейти к созданию аккаунта"/>
+        </StackPanel>
+    </Grid>
+</Page>

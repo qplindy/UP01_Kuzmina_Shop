@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:UP01_Kuzmina_Shop"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Здесь мы говорим, что по умолчанию используем светлую тему -->
+                <ResourceDictionary Source="Dictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

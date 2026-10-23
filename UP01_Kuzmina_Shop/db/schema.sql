@@ -18,6 +18,7 @@ CREATE TABLE [roles] (
 )
 GO
 
+
 CREATE TABLE [employees] (
   [employee_id] int PRIMARY KEY IDENTITY(1, 1),
   [store_id] int,

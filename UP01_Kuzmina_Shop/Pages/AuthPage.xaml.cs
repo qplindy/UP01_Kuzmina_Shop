@@ -49,7 +49,7 @@ namespace UP01_Kuzmina_Shop.Pages
 
             string hashedPassword = GetHash(PasswordBoxPass.Password);
 
-            using (var db = new SHOPEntities()) // Используем наше имя класса
+            using (var db = new SHOPIEntities()) // Используем наше имя класса
             {
                 var user = db.Users.AsNoTracking().FirstOrDefault(u => u.Login == TextBoxLogin.Text && u.Password == hashedPassword);
 

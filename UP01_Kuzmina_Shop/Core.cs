@@ -9,6 +9,7 @@ namespace UP01_Kuzmina_Shop
     // Этот класс будет хранить данные о том, кто сейчас вошел в систему
     public static class Core
     {
+        public static SHOPIEntities Context = new SHOPIEntities();
         public static Users CurrentUser { get; set; }
     }
 }

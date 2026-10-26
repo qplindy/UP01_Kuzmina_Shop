@@ -21,9 +21,25 @@
             <TextBox x:Name="TbFIO" ToolTip="Ваши Фамилия Имя Отчество" />
 
             <TextBlock Text="Роль:" Margin="5,10,0,0"/>
-            <ComboBox x:Name="CbRole" Height="30" Margin="5" SelectedIndex="0">
-                <ComboBoxItem Content="Пользователь"/>
-                <ComboBoxItem Content="Администратор"/>
+            <!-- Вот здесь мы добавили привязку цветов к теме -->
+            <ComboBox x:Name="CbRole" Height="30" Margin="5" SelectedIndex="0" DisplayMemberPath="title"
+                      Background="{DynamicResource MainBackground}"
+                      Foreground="{DynamicResource TextColor}"
+                      BorderBrush="{DynamicResource BorderColor}">
+                <!-- Чтобы элементы списка тоже были темными, задаем стиль для ComboBoxItem -->
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBoxItem">
+                        <Setter Property="Background" Value="{DynamicResource MainBackground}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+                        <Setter Property="Padding" Value="5"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ComboBox.Resources>
             </ComboBox>
 
             <Button x:Name="BtnRegister" Content="Зарегистрироваться" Margin="5,20,5,5" Click="BtnRegister_Click" ToolTip="Создать аккаунт"/>

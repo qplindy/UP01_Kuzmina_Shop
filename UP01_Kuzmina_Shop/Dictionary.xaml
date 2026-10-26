@@ -49,4 +49,15 @@
         <Setter Property="Margin" Value="5"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
+
+    <!-- Стиль для выпадающего списка (ComboBox) в светлой теме -->
+    <Style TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="Open Sans"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="BorderBrush" Value="#CCCCCC"/>
+    </Style>
 </ResourceDictionary>

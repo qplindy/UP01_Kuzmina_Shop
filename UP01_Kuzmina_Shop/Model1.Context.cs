@@ -13,10 +13,10 @@ namespace UP01_Kuzmina_Shop
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SHOPEntities : DbContext
+    public partial class SHOPIEntities : DbContext
     {
-        public SHOPEntities()
-            : base("name=SHOPEntities")
+        public SHOPIEntities()
+            : base("name=SHOPIEntities")
         {
         }
     
@@ -41,7 +41,6 @@ namespace UP01_Kuzmina_Shop
         public virtual DbSet<stock> stock { get; set; }
         public virtual DbSet<stores> stores { get; set; }
         public virtual DbSet<suppliers> suppliers { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

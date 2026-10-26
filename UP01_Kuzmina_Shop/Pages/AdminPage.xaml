@@ -1,0 +1,28 @@
+﻿<Page x:Class="UP01_Kuzmina_Shop.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP01_Kuzmina_Shop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Панель администратора"
+      Background="{DynamicResource MainBackground}">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+            <!-- Динамический заголовок (требование методички) -->
+            <TextBlock Text="Панель администратора" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+
+            <TextBlock Text="Выберите раздел для работы:" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+            <!-- Кнопки перехода к таблицам -->
+            <Button x:Name="BtnUsers" Content="Управление пользователями" Margin="5,5,5,5" Click="BtnUsers_Click" ToolTip="Добавление, удаление и редактирование пользователей"/>
+            <Button x:Name="BtnProducts" Content="Товары" Margin="5,5,5,5" Click="BtnProducts_Click" ToolTip="Просмотр и редактирование товаров"/>
+            <Button x:Name="BtnSales" Content="Продажи" Margin="5,5,5,5" Click="BtnSales_Click" ToolTip="Просмотр и редактирование продаж"/>
+            <Button x:Name="BtnDiagrams" Content="Диаграммы и отчеты" Margin="5,20,5,5" Background="{DynamicResource SecondaryColor}" Click="BtnDiagrams_Click" ToolTip="Построение графиков и экспорт в Word/Excel"/>
+
+            <Button x:Name="BtnLogout" Content="Выйти из аккаунта" Margin="5,20,5,5" Background="Gray" Click="BtnLogout_Click" ToolTip="Вернуться на страницу авторизации"/>
+        </StackPanel>
+    </Grid>
+</Page>

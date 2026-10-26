@@ -13,6 +13,8 @@ namespace UP01_Kuzmina_Shop.Pages
         public RegPage()
         {
             InitializeComponent();
+            var cmb = Core.Context.roles.ToList();
+            CbRole.ItemsSource = cmb;
         }
 
         public static string GetHash(string password)
@@ -64,7 +66,7 @@ namespace UP01_Kuzmina_Shop.Pages
                 return;
             }
 
-            using (var db = new SHOPEntities()) // Используем наше имя класса
+            using (var db = new SHOPIEntities()) // Используем наше имя класса
             {
                 var userExists = db.Users.Any(u => u.Login == TbLogin.Text);
                 if (userExists)

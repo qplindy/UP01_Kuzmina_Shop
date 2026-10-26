@@ -47,4 +47,15 @@
         <Setter Property="Margin" Value="5"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
+
+    <!-- Стиль для выпадающего списка (ComboBox) в темной теме -->
+    <Style TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="Open Sans"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="Black"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+    </Style>
 </ResourceDictionary>

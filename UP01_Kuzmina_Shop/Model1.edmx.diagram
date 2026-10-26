@@ -4,45 +4,44 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="da3ad18f12bf407289628cc290d448b3" Name="Diagram1">
-        <EntityTypeShape EntityType="SHOPModel.categories" Width="1.5" PointX="1.5" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.customers" Width="1.5" PointX="1.5" PointY="37" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.employees" Width="1.5" PointX="1.5" PointY="23.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.loyalty_cards" Width="1.5" PointX="3.75" PointY="41.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.products" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.promotion_products" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.promotions" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.purchase_items" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.purchases" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.returns" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.roles" Width="1.5" PointX="1.5" PointY="27.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.sale_items" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.sales" Width="1.5" PointX="3.75" PointY="36.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.stock" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.stores" Width="1.5" PointX="1.5" PointY="30.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.suppliers" Width="1.5" PointX="1.5" PointY="33.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SHOPModel.Users" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="SHOPModel.FK__categorie__paren__571DF1D5" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__products__catego__5812160E" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__loyalty_c__custo__5FB337D6" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__sales__customer___6477ECF3" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__employees__role___5629CD9C" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__employees__store__5535A963" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__purchases__emplo__5AEE82B9" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__sales__employee___6383C8BA" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__promotion__produ__619B8048" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__purchase___produ__5CD6CB2B" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__sale_item__produ__66603565" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__stock__product_i__5EBF139D" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__promotion__promo__60A75C0F" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__purchase___purch__5BE2A6F2" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__purchases__store__59FA5E80" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__purchases__suppl__59063A47" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__returns__sale_it__6754599E" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__sale_item__sale___656C112C" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__sales__store_id__628FA481" ManuallyRouted="false" />
-        <AssociationConnector Association="SHOPModel.FK__stock__store_id__5DCAEF64" ManuallyRouted="false" />
+      <Diagram DiagramId="62d35efc4d8a464481e945cec05c8bc5" Name="Diagram1">
+        <EntityTypeShape EntityType="SHOPIModel.categories" Width="1.5" PointX="1.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.customers" Width="1.5" PointX="1.5" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.employees" Width="1.5" PointX="1.5" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.loyalty_cards" Width="1.5" PointX="3.75" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.products" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.promotion_products" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.promotions" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.purchase_items" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.purchases" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.returns" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.roles" Width="1.5" PointX="1.5" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.sale_items" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.sales" Width="1.5" PointX="3.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.stock" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.stores" Width="1.5" PointX="1.5" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.suppliers" Width="1.5" PointX="1.5" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPIModel.Users" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SHOPIModel.FK__categorie__paren__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__products__catego__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__loyalty_c__custo__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__sales__customer___787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__employees__role___6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__employees__store__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__purchases__emplo__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__sales__employee___778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__promotion__produ__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__purchase___produ__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__sale_item__produ__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__stock__product_i__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__promotion__promo__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__purchase___purch__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__purchases__store__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__purchases__suppl__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__returns__sale_it__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__sale_item__sale___797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__sales__store_id__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPIModel.FK__stock__store_id__71D1E811" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

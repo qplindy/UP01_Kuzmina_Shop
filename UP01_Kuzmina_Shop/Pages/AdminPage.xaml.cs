@@ -1,28 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace UP01_Kuzmina_Shop.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для AdminPage.xaml
-    /// </summary>
     public partial class AdminPage : Page
     {
         public AdminPage()
         {
             InitializeComponent();
+        }
+
+        // Переход к управлению пользователями (создадим на следующем шаге)
+        private void BtnUsers_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new UsersTabPage());
+        }
+
+        // Заглушки для будущих страниц
+        private void BtnProducts_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Страница товаров в разработке", "Внимание");
+        }
+
+        private void BtnSales_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Страница продаж в разработке", "Внимание");
+        }
+
+        private void BtnDiagrams_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Страница диаграмм в разработке", "Внимание");
+        }
+
+        // Выход из аккаунта
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Вы действительно хотите выйти из аккаунта?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                NavigationService?.Navigate(new AuthPage());
+            }
         }
     }
 }

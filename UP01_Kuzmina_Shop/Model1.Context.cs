@@ -13,10 +13,10 @@ namespace UP01_Kuzmina_Shop
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SHOPIEntities : DbContext
+    public partial class SHOPINGEntities : DbContext
     {
-        public SHOPIEntities()
-            : base("name=SHOPIEntities")
+        public SHOPINGEntities()
+            : base("name=SHOPINGEntities")
         {
         }
     

@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Security.Cryptography;
-using System.Data.Entity; // ЭТА СТРОЧКА ИСПРАВЛЯЕТ ОШИБКУ SaveChanges
+using UP01_Kuzmina_Shop;
 
 namespace UP01_Kuzmina_Shop.Pages
 {
@@ -13,6 +13,7 @@ namespace UP01_Kuzmina_Shop.Pages
         public RegPage()
         {
             InitializeComponent();
+
             var cmb = Core.Context.roles.ToList();
             CbRole.ItemsSource = cmb;
         }
@@ -66,7 +67,18 @@ namespace UP01_Kuzmina_Shop.Pages
                 return;
             }
 
-            using (var db = new SHOPIEntities()) // Используем наше имя класса
+            // ПРОВЕРКА НА ВЫБОР РОЛИ (защита от ошибки NullReferenceException)
+            string selectedRole = "Пользователь";
+            if (CbRole.SelectedItem != null)
+            {
+                var comboBoxItem = CbRole.SelectedItem as ComboBoxItem;
+                if (comboBoxItem != null)
+                {
+                    selectedRole = comboBoxItem.Content.ToString();
+                }
+            }
+
+            using (var db = new SHOPINGEntities())
             {
                 var userExists = db.Users.Any(u => u.Login == TbLogin.Text);
                 if (userExists)
@@ -80,11 +92,11 @@ namespace UP01_Kuzmina_Shop.Pages
                     Login = TbLogin.Text,
                     Password = GetHash(PbPassword.Password),
                     FIO = TbFIO.Text,
-                    Role = (CbRole.SelectedItem as ComboBoxItem).Content.ToString()
+                    Role = selectedRole // Используем проверенную роль
                 };
 
                 db.Users.Add(newUser);
-                db.SaveChanges(); // Теперь это сработает!
+                db.SaveChanges();
             }
 
             MessageBox.Show("Регистрация прошла успешно! Теперь вы можете войти.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);

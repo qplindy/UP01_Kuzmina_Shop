@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище SHOPIModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище SHOPINGModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="categories">
           <Key>
             <PropertyRef Name="category_id" />
@@ -188,7 +188,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__employees__role___6A30C649">
+        <Association Name="FK__employees__role___693CA210">
           <End Role="roles" Type="Self.roles" Multiplicity="0..1" />
           <End Role="employees" Type="Self.employees" Multiplicity="*" />
           <ReferentialConstraint>
@@ -200,7 +200,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__employees__store__693CA210">
+        <Association Name="FK__employees__store__6A30C649">
           <End Role="stores" Type="Self.stores" Multiplicity="0..1" />
           <End Role="employees" Type="Self.employees" Multiplicity="*" />
           <ReferentialConstraint>
@@ -416,7 +416,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище SHOPIModelContainer">
+        <EntityContainer Name="Хранилище SHOPINGModelContainer">
           <EntitySet Name="categories" EntityType="Self.categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="employees" EntityType="Self.employees" Schema="dbo" store:Type="Tables" />
@@ -438,11 +438,11 @@
             <End Role="categories" EntitySet="categories" />
             <End Role="categories1" EntitySet="categories" />
           </AssociationSet>
-          <AssociationSet Name="FK__employees__role___6A30C649" Association="Self.FK__employees__role___6A30C649">
+          <AssociationSet Name="FK__employees__role___693CA210" Association="Self.FK__employees__role___693CA210">
             <End Role="roles" EntitySet="roles" />
             <End Role="employees" EntitySet="employees" />
           </AssociationSet>
-          <AssociationSet Name="FK__employees__store__693CA210" Association="Self.FK__employees__store__693CA210">
+          <AssociationSet Name="FK__employees__store__6A30C649" Association="Self.FK__employees__store__6A30C649">
             <End Role="stores" EntitySet="stores" />
             <End Role="employees" EntitySet="employees" />
           </AssociationSet>
@@ -519,7 +519,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="SHOPIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="SHOPINGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="categories">
           <Key>
             <PropertyRef Name="category_id" />
@@ -553,8 +553,8 @@
           <Property Name="full_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="hired_at" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="roles" Relationship="Self.FK__employees__role___6A30C649" FromRole="employees" ToRole="roles" />
-          <NavigationProperty Name="stores" Relationship="Self.FK__employees__store__693CA210" FromRole="employees" ToRole="stores" />
+          <NavigationProperty Name="roles" Relationship="Self.FK__employees__role___693CA210" FromRole="employees" ToRole="roles" />
+          <NavigationProperty Name="stores" Relationship="Self.FK__employees__store__6A30C649" FromRole="employees" ToRole="stores" />
           <NavigationProperty Name="purchases" Relationship="Self.FK__purchases__emplo__6EF57B66" FromRole="employees" ToRole="purchases" />
           <NavigationProperty Name="sales" Relationship="Self.FK__sales__employee___778AC167" FromRole="employees" ToRole="sales" />
         </EntityType>
@@ -653,7 +653,7 @@
           </Key>
           <Property Name="role_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="employees" Relationship="Self.FK__employees__role___6A30C649" FromRole="roles" ToRole="employees" />
+          <NavigationProperty Name="employees" Relationship="Self.FK__employees__role___693CA210" FromRole="roles" ToRole="employees" />
         </EntityType>
         <EntityType Name="sale_items">
           <Key>
@@ -704,7 +704,7 @@
           <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="opened_at" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="employees" Relationship="Self.FK__employees__store__693CA210" FromRole="stores" ToRole="employees" />
+          <NavigationProperty Name="employees" Relationship="Self.FK__employees__store__6A30C649" FromRole="stores" ToRole="employees" />
           <NavigationProperty Name="purchases" Relationship="Self.FK__purchases__store__6E01572D" FromRole="stores" ToRole="purchases" />
           <NavigationProperty Name="sales" Relationship="Self.FK__sales__store_id__76969D2E" FromRole="stores" ToRole="sales" />
           <NavigationProperty Name="stock" Relationship="Self.FK__stock__store_id__71D1E811" FromRole="stores" ToRole="stock" />
@@ -779,7 +779,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__employees__role___6A30C649">
+        <Association Name="FK__employees__role___693CA210">
           <End Role="roles" Type="Self.roles" Multiplicity="0..1" />
           <End Role="employees" Type="Self.employees" Multiplicity="*" />
           <ReferentialConstraint>
@@ -791,7 +791,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__employees__store__693CA210">
+        <Association Name="FK__employees__store__6A30C649">
           <End Role="stores" Type="Self.stores" Multiplicity="0..1" />
           <End Role="employees" Type="Self.employees" Multiplicity="*" />
           <ReferentialConstraint>
@@ -971,7 +971,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="SHOPIEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SHOPINGEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="categories" EntityType="Self.categories" />
           <EntitySet Name="customers" EntityType="Self.customers" />
           <EntitySet Name="employees" EntityType="Self.employees" />
@@ -1005,11 +1005,11 @@
             <End Role="customers" EntitySet="customers" />
             <End Role="sales" EntitySet="sales" />
           </AssociationSet>
-          <AssociationSet Name="FK__employees__role___6A30C649" Association="Self.FK__employees__role___6A30C649">
+          <AssociationSet Name="FK__employees__role___693CA210" Association="Self.FK__employees__role___693CA210">
             <End Role="roles" EntitySet="roles" />
             <End Role="employees" EntitySet="employees" />
           </AssociationSet>
-          <AssociationSet Name="FK__employees__store__693CA210" Association="Self.FK__employees__store__693CA210">
+          <AssociationSet Name="FK__employees__store__6A30C649" Association="Self.FK__employees__store__6A30C649">
             <End Role="stores" EntitySet="stores" />
             <End Role="employees" EntitySet="employees" />
           </AssociationSet>
@@ -1075,9 +1075,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище SHOPIModelContainer" CdmEntityContainer="SHOPIEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище SHOPINGModelContainer" CdmEntityContainer="SHOPINGEntities">
           <EntitySetMapping Name="categories">
-            <EntityTypeMapping TypeName="SHOPIModel.categories">
+            <EntityTypeMapping TypeName="SHOPINGModel.categories">
               <MappingFragment StoreEntitySet="categories">
                 <ScalarProperty Name="category_id" ColumnName="category_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -1086,7 +1086,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="customers">
-            <EntityTypeMapping TypeName="SHOPIModel.customers">
+            <EntityTypeMapping TypeName="SHOPINGModel.customers">
               <MappingFragment StoreEntitySet="customers">
                 <ScalarProperty Name="customer_id" ColumnName="customer_id" />
                 <ScalarProperty Name="full_name" ColumnName="full_name" />
@@ -1097,7 +1097,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="employees">
-            <EntityTypeMapping TypeName="SHOPIModel.employees">
+            <EntityTypeMapping TypeName="SHOPINGModel.employees">
               <MappingFragment StoreEntitySet="employees">
                 <ScalarProperty Name="employee_id" ColumnName="employee_id" />
                 <ScalarProperty Name="store_id" ColumnName="store_id" />
@@ -1109,7 +1109,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="loyalty_cards">
-            <EntityTypeMapping TypeName="SHOPIModel.loyalty_cards">
+            <EntityTypeMapping TypeName="SHOPINGModel.loyalty_cards">
               <MappingFragment StoreEntitySet="loyalty_cards">
                 <ScalarProperty Name="card_id" ColumnName="card_id" />
                 <ScalarProperty Name="customer_id" ColumnName="customer_id" />
@@ -1120,7 +1120,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="products">
-            <EntityTypeMapping TypeName="SHOPIModel.products">
+            <EntityTypeMapping TypeName="SHOPINGModel.products">
               <MappingFragment StoreEntitySet="products">
                 <ScalarProperty Name="product_id" ColumnName="product_id" />
                 <ScalarProperty Name="category_id" ColumnName="category_id" />
@@ -1135,7 +1135,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="promotion_products">
-            <EntityTypeMapping TypeName="SHOPIModel.promotion_products">
+            <EntityTypeMapping TypeName="SHOPINGModel.promotion_products">
               <MappingFragment StoreEntitySet="promotion_products">
                 <ScalarProperty Name="promotion_product_id" ColumnName="promotion_product_id" />
                 <ScalarProperty Name="promotion_id" ColumnName="promotion_id" />
@@ -1144,7 +1144,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="promotions">
-            <EntityTypeMapping TypeName="SHOPIModel.promotions">
+            <EntityTypeMapping TypeName="SHOPINGModel.promotions">
               <MappingFragment StoreEntitySet="promotions">
                 <ScalarProperty Name="promotion_id" ColumnName="promotion_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -1155,7 +1155,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="purchase_items">
-            <EntityTypeMapping TypeName="SHOPIModel.purchase_items">
+            <EntityTypeMapping TypeName="SHOPINGModel.purchase_items">
               <MappingFragment StoreEntitySet="purchase_items">
                 <ScalarProperty Name="purchase_item_id" ColumnName="purchase_item_id" />
                 <ScalarProperty Name="purchase_id" ColumnName="purchase_id" />
@@ -1166,7 +1166,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="purchases">
-            <EntityTypeMapping TypeName="SHOPIModel.purchases">
+            <EntityTypeMapping TypeName="SHOPINGModel.purchases">
               <MappingFragment StoreEntitySet="purchases">
                 <ScalarProperty Name="purchase_id" ColumnName="purchase_id" />
                 <ScalarProperty Name="supplier_id" ColumnName="supplier_id" />
@@ -1178,7 +1178,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="returns">
-            <EntityTypeMapping TypeName="SHOPIModel.returns">
+            <EntityTypeMapping TypeName="SHOPINGModel.returns">
               <MappingFragment StoreEntitySet="returns">
                 <ScalarProperty Name="return_id" ColumnName="return_id" />
                 <ScalarProperty Name="sale_item_id" ColumnName="sale_item_id" />
@@ -1189,7 +1189,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="roles">
-            <EntityTypeMapping TypeName="SHOPIModel.roles">
+            <EntityTypeMapping TypeName="SHOPINGModel.roles">
               <MappingFragment StoreEntitySet="roles">
                 <ScalarProperty Name="role_id" ColumnName="role_id" />
                 <ScalarProperty Name="title" ColumnName="title" />
@@ -1197,7 +1197,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sale_items">
-            <EntityTypeMapping TypeName="SHOPIModel.sale_items">
+            <EntityTypeMapping TypeName="SHOPINGModel.sale_items">
               <MappingFragment StoreEntitySet="sale_items">
                 <ScalarProperty Name="sale_item_id" ColumnName="sale_item_id" />
                 <ScalarProperty Name="sale_id" ColumnName="sale_id" />
@@ -1209,7 +1209,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sales">
-            <EntityTypeMapping TypeName="SHOPIModel.sales">
+            <EntityTypeMapping TypeName="SHOPINGModel.sales">
               <MappingFragment StoreEntitySet="sales">
                 <ScalarProperty Name="sale_id" ColumnName="sale_id" />
                 <ScalarProperty Name="store_id" ColumnName="store_id" />
@@ -1221,7 +1221,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="stock">
-            <EntityTypeMapping TypeName="SHOPIModel.stock">
+            <EntityTypeMapping TypeName="SHOPINGModel.stock">
               <MappingFragment StoreEntitySet="stock">
                 <ScalarProperty Name="stock_id" ColumnName="stock_id" />
                 <ScalarProperty Name="store_id" ColumnName="store_id" />
@@ -1231,7 +1231,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="stores">
-            <EntityTypeMapping TypeName="SHOPIModel.stores">
+            <EntityTypeMapping TypeName="SHOPINGModel.stores">
               <MappingFragment StoreEntitySet="stores">
                 <ScalarProperty Name="store_id" ColumnName="store_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -1242,7 +1242,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="suppliers">
-            <EntityTypeMapping TypeName="SHOPIModel.suppliers">
+            <EntityTypeMapping TypeName="SHOPINGModel.suppliers">
               <MappingFragment StoreEntitySet="suppliers">
                 <ScalarProperty Name="supplier_id" ColumnName="supplier_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -1253,7 +1253,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="SHOPIModel.Users">
+            <EntityTypeMapping TypeName="SHOPINGModel.Users">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
